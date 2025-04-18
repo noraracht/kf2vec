@@ -1,5 +1,5 @@
 
-# kf2d
+# kf2vec
 <!-- k-mer frequency to distance-->
 
 INSTALLATION
