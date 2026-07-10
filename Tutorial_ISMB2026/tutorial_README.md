@@ -59,25 +59,10 @@ Backbone genomes
 ```bash
 git clone https://github.com/noraracht/Tutorial_ISMB_data
 ```
----
 
-## Step 1. Extract k-mer frequencies
-
-```bash
-kf2vec get_frequencies \
-    -input_dir ./clade_11_fna_train \
-    -output_dir ./clade_11_fna_train_kf
-
-kf2vec get_frequencies \
-    -input_dir ./clade_11_fna_test \
-    -output_dir ./clade_11_fna_test_kf
-```
-
-Output: `.kf` files containing normalized k-mer frequencies.
 
 ---
-
-## Step 2. Split the phylogeny and compute true distances
+## Step 1. Split the phylogeny and compute true distances
 Note: We split the <ins>full</ins> tree into clades to keep track of the clade membership of the query sequences.
 
 ```bash
@@ -102,7 +87,21 @@ clade_11_prunned_subtree_0.di_mtrx
 clade_11_prunned_subtree_1.di_mtrx
 ...
 ```
+---
 
+## Step 2. Extract k-mer frequencies
+
+```bash
+kf2vec get_frequencies \
+    -input_dir ./clade_11_fna_train \
+    -output_dir ./clade_11_fna_train_kf
+
+kf2vec get_frequencies \
+    -input_dir ./clade_11_fna_test \
+    -output_dir ./clade_11_fna_test_kf
+```
+
+Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
 ## Step 3. Train the classifier
