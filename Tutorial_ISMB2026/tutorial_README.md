@@ -106,13 +106,13 @@ clade_11_prunned_subtree_1.di_mtrx
 ---
 
 ## Step 3. Train the classifier
-
+The classifier was pretrained for 300 epochs.
 ```bash
 kf2vec train_classifier \
-    -input_dir ./toy_example/train_tree_kf \
-    -subtrees ./toy_example/train_tree_newick/train_tree.subtrees \
-    -e 10 \
-    -o ./toy_example/train_tree_models
+    -input_dir ./clade_11_fna_train_kf \
+    -subtrees ./train_tree/train_set.subtrees \
+    -e 2 \
+    -o ./models
 ```
 
 Output:
@@ -127,9 +127,9 @@ classifier_model.ckpt
 
 ```bash
 kf2vec classify \
-    -input_dir ./toy_example/test_kf \
-    -model ./toy_example/train_tree_models \
-    -o ./toy_example/test_results
+    -input_dir ./clade_11_fna_test_kf  \
+    -model ./pretrained_models \
+    -o ./results_pretrained
 ```
 
 Output:
