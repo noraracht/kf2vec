@@ -56,7 +56,7 @@ Backbone genomes
 
 ## Step 0. Obtain dataset
 
-```
+```bash
 git clone https://github.com/noraracht/Tutorial_ISMB_data
 ```
 ---
@@ -78,17 +78,12 @@ Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
 ## Step 2. Split the phylogeny and compute true distances
-Note: we split the <ins>full</ins> tree This is how we keep track of clade membership for query sequences.
+Note: We split the <ins>full</ins> tree into clades to keep track of the clade membership of the query sequences.
 
 ```bash
 kf2vec divide_tree \
     -tree clade_11.nwk \
     -size 100
-```
-Output:
-
-```text
-clade_11.subtrees
 ```
 
 The full phylogeny was pruned to remove the query sequences. Pairwise distances were then computed on the <ins>pruned</ins> tree.
