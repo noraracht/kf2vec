@@ -142,7 +142,7 @@ classes.out
 ---
 
 ## Step 5. Train distance models
-
+The embedder was pretrained for 1000 epochs.
 ### Single-clade example
 
 ```bash
