@@ -195,7 +195,7 @@ These files are used directly by APPLES.
 
 ---
 
-# Query Placement with APPLES
+# Query placement with APPLES
 
 Install APPLES and GAPPA:
 
@@ -203,6 +203,10 @@ Install APPLES and GAPPA:
 pip install apples
 
 conda install bioconda::gappa
+```
+Merge distance matrices into a single combined matrix:
+```bash
+python merge_dist_mtrx.py
 ```
 
 Run APPLES:
