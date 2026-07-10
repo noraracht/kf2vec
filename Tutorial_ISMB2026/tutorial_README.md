@@ -191,7 +191,7 @@ These files are used directly by APPLES.
 
 ---
 
-# Query placement with APPLES
+# Query placement
 
 Install APPLES and GAPPA:
 
@@ -200,45 +200,30 @@ pip install apples
 
 conda install bioconda::gappa
 ```
-Merge distance matrices into a single combined matrix:
+## Merge distance matrices into a single combined matrix:
 ```bash
 python merge_dist_mtrx.py
 ```
 
-Run APPLES:
+## Run APPLES:
 
 ```bash
 run_apples.py \
-    -d ./toy_example/test_results/apples_input_di_mtrx_query_G000196015.csv \
-    -t ./toy_example/train_tree_newick/train_tree.nwk \
+    -d ./combined_dimtrx_pretrained.tsv \
+    -t ./clade_11_p1_prunned.nwk \
     -f 0 \
     -b 5 \
-    -o ./toy_example/placement/G000196015.jplace
+    -o ./clade_11_p1_inferred.jplace
 ```
 
 Convert the placement to Newick format:
 
 ```bash
 gappa examine graft \
-    --jplace-path ./toy_example/placement/G000196015.jplace \
-    --out-dir ./toy_example/placement/result
+    --jplace-path ./clade_11_p1_inferred.jplace \
+    --out-dir ./pl_inferred
 ```
 
----
-
-# Optional: Scale Branch Lengths
-
-```bash
-kf2vec scale_tree \
-    -tree ./toy_example/train_tree_newick/train_tree.nwk \
-    -factor 100
-```
-
-Output:
-
-```text
-train_tree_r100.0.nwk
-```
 
 ---
 
@@ -249,7 +234,6 @@ After completing the tutorial, refer to the full command documentation for:
 - get_frequencies
 - divide_tree
 - get_distances
-- scale_tree
 - train_classifier
 - classify
 - train_model_set
