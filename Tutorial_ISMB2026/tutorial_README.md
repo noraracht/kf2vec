@@ -124,6 +124,7 @@ classifier_model.ckpt
 ---
 
 ## Step 4. Classify query genomes
+we use <ins>pretrained</ins> model for classification.
 
 ```bash
 kf2vec classify \
@@ -174,14 +175,14 @@ model_subtree_1.ckpt
 
 ---
 
-## Step 6. Predict query-to-backbone distances
-
+## Step 6. Estimate query-to-backbone distances
+We use  a < ins> pretrained </ins> model for distance estimation.
 ```bash
 kf2vec query \
-    -input_dir ./toy_example/test_kf \
-    -model ./toy_example/train_tree_models \
-    -classes ./toy_example/test_results \
-    -o ./toy_example/test_results
+    -input_dir ./clade_11_fna_test_kf \
+    -model ./pretrained_models \
+    -classes ./results_pretrained \
+    -o ./results_pretrained
 ```
 
 Output:
