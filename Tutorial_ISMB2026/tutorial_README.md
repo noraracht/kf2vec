@@ -205,7 +205,7 @@ conda install bioconda::gappa
 python merge_dist_mtrx.py
 ```
 
-## Run APPLES:
+## Perform placement:
 
 ```bash
 run_apples.py \
@@ -216,7 +216,7 @@ run_apples.py \
     -o ./clade_11_p1_inferred.jplace
 ```
 
-Convert the placement to Newick format:
+## Convert jplace to Newick:
 
 ```bash
 gappa examine graft \
