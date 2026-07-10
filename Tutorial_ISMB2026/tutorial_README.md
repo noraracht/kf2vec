@@ -24,7 +24,29 @@ kf2vec --help
 
 ---
 # Tutorial steps
+The toy dataset included with kf2vec demonstrates the complete workflow:
 
+```text
+1. Split the tree into subtrees
+      │
+      ▼
+2. Extract k-mer frequencies
+      │
+      ▼
+3. Train classifier
+      │
+      ▼
+4. Classify queries
+      │
+      ▼
+5. Train distance models
+      │
+      ▼
+6. Estimate query-to-backbone distances
+      │
+      ▼
+7. Place queries onto the phylogeny
+```
 
 
 ## Step 0. Obtain dataset
