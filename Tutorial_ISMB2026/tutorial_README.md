@@ -22,9 +22,7 @@ kf2vec --version
 kf2vec --help
 ```
 
----
-
-## Download tutorial data
+## Tutorial dataset
 
 ```
 git clone https://github.com/noraracht/Tutorial_ISMB_data
