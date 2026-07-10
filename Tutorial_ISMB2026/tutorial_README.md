@@ -96,8 +96,8 @@ Output:
 
 ```text
 clade_11.subtrees
-subtree_0.di_mtrx
-subtree_1.di_mtrx
+clade_11_prunned_subtree_0.di_mtrx
+clade_11_prunned_subtree_1.di_mtrx
 ...
 ```
 
