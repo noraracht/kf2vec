@@ -98,8 +98,8 @@ kf2vec get_frequencies \
     -output_dir ./clade_11_fna_train_kf
 
 kf2vec get_frequencies \
-    -input_dir ./clade_11_fna_test \
-    -output_dir ./clade_11_fna_test_kf
+    -input_dir ./clade_11_fna_test_p1 \
+    -output_dir ./clade_11_fna_test_kf_p1
 ```
 
 Output: `.kf` files containing normalized k-mer frequencies.
@@ -129,7 +129,7 @@ we use <ins>pretrained</ins> model for classification.
 
 ```bash
 kf2vec classify \
-    -input_dir ./clade_11_fna_test_kf  \
+    -input_dir ./clade_11_fna_test_kf_p1  \
     -model ./pretrained_models \
     -o ./results_pretrained
 ```
@@ -180,7 +180,7 @@ model_subtree_1.ckpt
 We use  a < ins> pretrained </ins> model for distance estimation.
 ```bash
 kf2vec query \
-    -input_dir ./clade_11_fna_test_kf \
+    -input_dir ./clade_11_fna_test_kf_p1 \
     -model ./pretrained_models \
     -classes ./results_pretrained \
     -o ./results_pretrained
