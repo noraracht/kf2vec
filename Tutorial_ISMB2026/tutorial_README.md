@@ -24,6 +24,15 @@ kf2vec --help
 
 ---
 
+## Download tutorial data
+
+```
+git clone https://github.com/noraracht/Tutorial_ISMB_data
+```
+
+---
+
+
 # Quick Start Tutorial
 
 The toy dataset included with kf2vec demonstrates the complete workflow:
