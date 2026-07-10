@@ -78,7 +78,7 @@ Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
 ## Step 2. Split the phylogeny and compute true distances
-We split the <ins>full</ins> tree but compute distance on a <ins>pruned</ins> tree. This is how we keep track of clade membership for query sequences.
+Note: we split the <ins>full</ins> tree but compute distance on a <ins>pruned</ins> tree. This is how we keep track of clade membership for query sequences.
 
 ```bash
 kf2vec divide_tree \
