@@ -78,13 +78,20 @@ Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
 ## Step 2. Split the phylogeny and compute true distances
-Note: we split the <ins>full</ins> tree but compute distance on a <ins>pruned</ins> tree. This is how we keep track of clade membership for query sequences.
+Note: we split the <ins>full</ins> tree This is how we keep track of clade membership for query sequences.
 
 ```bash
 kf2vec divide_tree \
     -tree clade_11.nwk \
     -size 100
 ```
+Output:
+
+```text
+clade_11.subtrees
+```
+
+The full phylogeny was pruned to remove the query sequences. Pairwise distances were then computed on the <ins>pruned</ins> tree.
 
 ```bash
 kf2vec get_distances \
