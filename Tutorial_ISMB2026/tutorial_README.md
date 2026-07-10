@@ -22,14 +22,13 @@ kf2vec --version
 kf2vec --help
 ```
 
+---
+
 ## Tutorial dataset
 
 ```
 git clone https://github.com/noraracht/Tutorial_ISMB_data
 ```
-
----
-
 
 # Quick Start Tutorial
 
@@ -59,6 +58,7 @@ Backbone genomes
       ▼
 7. Place queries onto the phylogeny
 ```
+
 
 ## Step 1. Extract k-mer frequencies
 
