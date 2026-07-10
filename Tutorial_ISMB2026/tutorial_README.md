@@ -95,7 +95,7 @@ kf2vec get_distances \
 Output:
 
 ```text
-train_tree.subtrees
+clade_11.subtrees
 subtree_0.di_mtrx
 subtree_1.di_mtrx
 ...
