@@ -142,13 +142,26 @@ classes.out
 
 ## Step 5. Train distance models
 
+### Single-clade example
+
 ```bash
 kf2vec train_model_set \
-    -input_dir ./toy_example/train_tree_kf \
-    -true_dist ./toy_example/train_tree_newick \
-    -subtrees ./toy_example/train_tree_newick/train_tree.subtrees \
-    -e 10 \
-    -o ./toy_example/train_tree_models
+    -input_dir ./clade_11_fna_train_kf \
+    -true_dist ./train_tree \
+    -subtrees ./train_tree/train_set.subtrees \
+    -clade 1 \
+    -e 2 \
+    -o ./models
+```
+
+### Train on all clades consecutively
+```bash
+kf2vec train_model_set \
+    -input_dir ./clade_11_fna_train_kf \
+    -true_dist ./train_tree \
+    -subtrees ./train_tree/train_set.subtrees \
+    -e 2 \
+    -o ./models
 ```
 
 Output:
@@ -157,18 +170,6 @@ Output:
 model_subtree_0.ckpt
 model_subtree_1.ckpt
 ...
-```
-
-### Single-clade example
-
-```bash
-kf2vec train_model_set \
-    -input_dir ./toy_example/train_tree_kf \
-    -true_dist ./toy_example/train_tree_newick \
-    -subtrees ./toy_example/train_tree_newick/train_tree.subtrees \
-    -clade 0 \
-    -e 10 \
-    -o ./toy_example/train_tree_models
 ```
 
 ---
