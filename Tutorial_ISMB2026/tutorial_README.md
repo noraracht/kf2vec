@@ -65,12 +65,12 @@ git clone https://github.com/noraracht/Tutorial_ISMB_data
 
 ```bash
 kf2vec get_frequencies \
-    -input_dir ./toy_example/train_tree_fna \
-    -output_dir ./toy_example/train_tree_kf
+    -input_dir ./clade_11_fna_train \
+    -output_dir ./clade_11_fna_train_kf
 
 kf2vec get_frequencies \
-    -input_dir ./toy_example/test_fna \
-    -output_dir ./toy_example/test_kf
+    -input_dir ./clade_11_fna_test \
+    -output_dir ./clade_11_fna_test_kf
 ```
 
 Output: `.kf` files containing normalized k-mer frequencies.
@@ -78,17 +78,18 @@ Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
 ## Step 2. Split the phylogeny and compute true distances
+We split the <u>full</u> tree but compute distance on a <u>pruned</u> tree. This is how we keep track of clade membership for query sequences.
 
 ```bash
 kf2vec divide_tree \
-    -tree ./toy_example/train_tree_newick/train_tree.nwk \
-    -size 2
+    -tree clade_11.nwk \
+    -size 100
 ```
 
 ```bash
 kf2vec get_distances \
-    -tree ./toy_example/train_tree_newick/train_tree.nwk \
-    -subtrees ./toy_example/train_tree_newick/train_tree.subtrees
+    -tree ./train_tree/clade_11_prunned.nwk \
+    -subtrees ./train_tree/train_set.subtrees
 ```
 
 Output:
