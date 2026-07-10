@@ -87,6 +87,7 @@ clade_11_prunned_subtree_0.di_mtrx
 clade_11_prunned_subtree_1.di_mtrx
 ...
 ```
+
 ---
 
 ## Step 2. Extract k-mer frequencies
@@ -101,6 +102,7 @@ kf2vec get_frequencies \
     -output_dir ./clade_11_fna_test_kf
 ```
 Output: `.kf` files containing normalized k-mer frequencies.
+
 ---
 
 ## Step 3. Train the classifier
