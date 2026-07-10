@@ -100,7 +100,6 @@ kf2vec get_frequencies \
     -input_dir ./clade_11_fna_test \
     -output_dir ./clade_11_fna_test_kf
 ```
-
 Output: `.kf` files containing normalized k-mer frequencies.
 ---
 
