@@ -24,7 +24,7 @@ kf2vec --help
 
 ---
 # Tutorial steps
-The toy dataset included with kf2vec demonstrates the complete workflow:
+The example dataset will demonstrate the following workflow:
 
 ```text
 1. Split the tree into subtrees
