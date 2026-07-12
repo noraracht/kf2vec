@@ -65,6 +65,7 @@ kf2vec divide_tree \
     -tree clade_11.nwk \
     -size 100
 ```
+![Partitions](clade_11_colored.pdf)
 
 The full phylogeny was pruned to remove the query sequences. Pairwise distances were then computed on the <ins>pruned</ins> tree.
 
