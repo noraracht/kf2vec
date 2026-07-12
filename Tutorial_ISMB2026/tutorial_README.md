@@ -66,7 +66,7 @@ kf2vec divide_tree \
     -size 100
 ```
 
-![App Screenshot]([https://github.com/noraracht/Tutorial_ISMB_data/blob/main/images/clade_11_colored.pdf])
+![App Screenshot](https://github.com/noraracht/Tutorial_ISMB_data/blob/main/images/clade_11_colored.pdf)
 
 The full phylogeny was pruned to remove the query sequences. Pairwise distances were then computed on the <ins>pruned</ins> tree.
 
