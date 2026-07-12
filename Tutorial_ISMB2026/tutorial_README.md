@@ -221,6 +221,7 @@ run_apples.py \
 ```bash
 gappa examine graft \
     --jplace-path ./clade_11_p1_inferred.jplace \
+    --allow-file-overwriting \
     --out-dir ./pl_inferred
 ```
 
